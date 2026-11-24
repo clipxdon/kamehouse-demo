@@ -375,8 +375,8 @@ function Footer() {
     <footer className="footer">
       <p className="f-big" aria-hidden="true">KAMEHOUSE</p>
       <div className="f-row">
-        <p>© 2026 Kamehouse Fossano · {SHOP.address}, {SHOP.city} · Tel. {SHOP.phone}</p>
-        <p>Bozza dimostrativa. I marchi citati appartengono ai rispettivi proprietari.</p>
+        <p>© {new Date().getFullYear()} {SHOP.legalName} · {SHOP.address}, {SHOP.city} · P.IVA {SHOP.vat} · Tel. {SHOP.phone}</p>
+        <p><a href={SHOP.privacy}>Privacy e cookie</a> · I marchi citati appartengono ai rispettivi proprietari.</p>
       </div>
     </footer>
   )

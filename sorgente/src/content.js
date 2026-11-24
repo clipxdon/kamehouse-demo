@@ -9,6 +9,11 @@ export const SHOP = {
   instagram: 'https://www.instagram.com/kamehouse_fossano/',
   facebook: 'https://www.facebook.com/people/Kamehouse-Fossano/61566570082751/',
   tiktok: 'https://www.tiktok.com/@kamehouse_fossano',
+  // DA COMPLETARE con i dati del cliente prima della pubblicazione
+  legalName: '[RAGIONE SOCIALE]',
+  vat: '[P.IVA]',
+  email: '[EMAIL]',
+  privacy: './privacy.html',
 }
 
 export const BRANDS = ['Bandai', 'Tamashii Nations', 'Banpresto', 'Funko', 'Abystyle', 'Tsume', 'Manga', 'Carte TCG', 'Preordini', 'Action figure', 'Statue']
