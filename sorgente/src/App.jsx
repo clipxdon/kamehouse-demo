@@ -7,7 +7,7 @@ import CountUp from './components/CountUp'
 import Glyph from './components/Glyph'
 import Marquee from './components/Marquee'
 import TiltCard from './components/TiltCard'
-import { SHOP, BRANDS, CATEGORIES, SERVICES, REVIEWS, HOURS } from './content'
+import { SHOP, CREDIT, BRANDS, CATEGORIES, SERVICES, REVIEWS, HOURS } from './content'
 import { scene, reducedMotion, isMobile } from './store'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -376,7 +376,7 @@ function Footer() {
       <p className="f-big" aria-hidden="true">KAMEHOUSE</p>
       <div className="f-row">
         <p>© {new Date().getFullYear()} {SHOP.legalName} · {SHOP.address}, {SHOP.city} · P.IVA {SHOP.vat} · Tel. {SHOP.phone}</p>
-        <p><a href={SHOP.privacy}>Privacy e cookie</a> · I marchi citati appartengono ai rispettivi proprietari.</p>
+        <p><a href={SHOP.privacy}>Privacy e cookie</a> · I marchi citati appartengono ai rispettivi proprietari. · Sito realizzato da <a href={CREDIT.url} target="_blank" rel="noopener">{CREDIT.name}</a></p>
       </div>
     </footer>
   )

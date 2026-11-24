@@ -17,8 +17,9 @@ Fatto:
 Da fare prima della pubblicazione:
 - [ ] dati del cliente in `src/content.js` e `public/privacy.html`: ragione sociale, P.IVA, email, hosting, data;
 - [ ] font in locale al posto di Google Fonts (vedi nota in `sorgente/index.html`);
+- [ ] link definitivo di donAutomation in `CREDIT` (`src/content.js`);
 - [ ] eventuali modifiche richieste dal cliente: foto vere, logo, testi, orari;
-- [ ] dominio e hosting; poi `canonical`, Open Graph con immagine, `robots.txt`, `sitemap.xml`;
+- [ ] dominio kamehousefossano.it (libero il 24/11, 3,99 € + IVA il 1° anno, rinnovo 11,99 € + IVA) intestato al cliente; hosting su Cloudflare Pages; poi `canonical`, Open Graph con immagine, `robots.txt`, `sitemap.xml`;
 - [ ] build (`npm ci && npm run build`), copia di `dist/` nella cartella pubblicata, prova su telefono.
 
 ## Versione 2

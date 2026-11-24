@@ -16,6 +16,9 @@ export const SHOP = {
   privacy: './privacy.html',
 }
 
+// Firma nel footer. DA AGGIORNARE con il link definitivo del sito donAutomation
+export const CREDIT = { name: 'donAutomation', url: '#' }
+
 export const BRANDS = ['Bandai', 'Tamashii Nations', 'Banpresto', 'Funko', 'Abystyle', 'Tsume', 'Manga', 'Carte TCG', 'Preordini', 'Action figure', 'Statue']
 
 export const CATEGORIES = [
