@@ -12,14 +12,16 @@ Il cliente ha scelto la **v1** come sito vetrina (incontro del 23/11/2026). Su q
 
 Fatto:
 - footer senza "bozza dimostrativa", con ragione sociale, P.IVA (obbligatoria sul sito di un'attività) e link alla privacy;
-- `sorgente/public/privacy.html`: informativa privacy e cookie per un sito vetrina senza moduli né tracciamento.
+- `sorgente/public/privacy.html`: informativa privacy e cookie per un sito vetrina senza moduli né tracciamento;
+- font in locale (`src/fonts`, sottoinsieme latino in WOFF, licenza OFL): nessuna richiesta a Google;
+- dominio kamehousefossano.it (acquistato su Aruba il 24/11/2026): canonical, Open Graph, dati strutturati, `robots.txt`, `sitemap.xml`.
 
 Da fare prima della pubblicazione:
 - [ ] dati del cliente in `src/content.js` e `public/privacy.html`: ragione sociale, P.IVA, email, hosting, data;
-- [ ] font in locale al posto di Google Fonts (vedi nota in `sorgente/index.html`);
 - [ ] link definitivo di donAutomation in `CREDIT` (`src/content.js`);
 - [ ] eventuali modifiche richieste dal cliente: foto vere, logo, testi, orari;
-- [ ] dominio kamehousefossano.it (libero il 24/11, 3,99 € + IVA il 1° anno, rinnovo 11,99 € + IVA) intestato al cliente; hosting su Cloudflare Pages; poi `canonical`, Open Graph con immagine, `robots.txt`, `sitemap.xml`;
+- [ ] hosting su Cloudflare Pages e collegamento del dominio da Aruba;
+- [ ] immagine di anteprima per i social (Open Graph) quando ci sono le foto vere;
 - [ ] build (`npm ci && npm run build`), copia di `dist/` nella cartella pubblicata, prova su telefono.
 
 ## Versione 2

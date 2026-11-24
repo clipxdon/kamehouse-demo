@@ -1,3 +1,7 @@
+/* Font ospitati in locale (licenza SIL OFL, vedi src/fonts): nessuna richiesta a Google */
+@font-face { font-family: 'Dela Gothic One'; src: url('./fonts/dela-gothic-one-latin.woff') format('woff'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Space Grotesk'; src: url('./fonts/space-grotesk-latin.woff') format('woff'); font-weight: 300 700; font-style: normal; font-display: swap; }
+
 :root {
   --teal: #14B8A6; --teal-d: #0B7F74; --pink: #FF5C8A; --ink: #111114; --paper: #FFF4E2; --yellow: #FFD23F;
   --display: 'Dela Gothic One', Impact, 'Arial Black', sans-serif;
