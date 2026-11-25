@@ -11,6 +11,8 @@ import { scene, dio, reducedMotion, isMobile, hasWebGL } from './store'
 import { installPress, drawGlyph, countTo, rollCaption, popBadge, markToday } from './motion'
 import gachaStill from './assets/render-gacha.webp'
 import dioStill from './assets/render-diorama.webp'
+import logo160 from './assets/logo-160.webp'
+import logo512 from './assets/logo-512.webp'
 
 gsap.registerPlugin(ScrollTrigger)
 const Scene = lazy(() => import('./three/Scene'))
@@ -47,12 +49,8 @@ const go = (id) => (e) => {
   else el.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' })
 }
 
-function Logo() {
-  return (
-    <span className="logo-mark" aria-hidden="true">
-      <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" /><path d="M15 37 32 20l17 17v11H15z" /></svg>
-    </span>
-  )
+function Logo({ size = 40 }) {
+  return <img className="logo-mark" src={size > 80 ? logo512 : logo160} alt="" width={size} height={size} />
 }
 
 function Nav() {
@@ -459,6 +457,7 @@ function Footer() {
     <footer className="footer">
       <p className="f-big" aria-hidden="true">KAMEHOUSE</p>
       <div className="f-row">
+        <img className="f-logo" src={logo512} alt="Logo di Kamehouse Fossano" width="112" height="112" loading="lazy" />
         <p>© 2026 Kamehouse Fossano · {SHOP.address}, {SHOP.city} · Tel. {SHOP.phone}</p>
         <p>Bozza dimostrativa, versione 2. I marchi citati appartengono ai rispettivi proprietari.</p>
       </div>

@@ -44,10 +44,8 @@ main, .footer, .nav { position: relative; z-index: 1; }
 /* ---------- navigazione */
 .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 20; display: flex; align-items: center; gap: 16px; padding: 16px var(--gut); pointer-events: none; }
 .nav > * { pointer-events: auto; }
-.logo { display: flex; align-items: center; gap: 8px; font-family: var(--display); font-size: 18px; text-decoration: none; background: var(--paper-2); border: var(--stroke); padding: 4px 16px 4px 4px; border-radius: 999px; }
-.logo-mark svg { width: 32px; height: 32px; display: block; }
-.logo-mark circle { fill: var(--teal); stroke: var(--ink); stroke-width: 5; }
-.logo-mark path { fill: var(--pink); stroke: var(--ink); stroke-width: 5; stroke-linejoin: round; }
+.logo { display: flex; align-items: center; gap: 8px; font-family: var(--display); font-size: 18px; text-decoration: none; background: var(--paper-2); border: var(--stroke); padding: 2px 16px 2px 2px; border-radius: 999px; }
+.logo-mark { width: 40px; height: 40px; display: block; flex: none; }
 .nav nav { display: flex; gap: 4px; margin-left: auto; background: var(--paper-2); border: var(--stroke); border-radius: 999px; padding: 4px; }
 .nav nav a { text-decoration: none; font-weight: 500; font-size: 15px; padding: 6px 16px; border-radius: 999px; transition: background-color .2s var(--ease); }
 .nav nav a:hover { background: var(--yellow-l); }
@@ -237,7 +235,8 @@ main, .footer, .nav { position: relative; z-index: 1; }
 /* ---------- piè di pagina */
 .footer { background: var(--ink); color: var(--paper); padding: 40px var(--gut) 28px; overflow: hidden; }
 .f-big { font-family: var(--display); font-size: clamp(48px, 13vw, 220px); line-height: .9; color: transparent; -webkit-text-stroke: 2px var(--teal); white-space: nowrap; }
-.f-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; margin-top: 20px; font-size: 14px; color: #CFC8D3; }
+.f-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px 24px; margin-top: 20px; font-size: 14px; color: #CFC8D3; }
+.f-logo { width: 112px; height: 112px; flex: none; }
 
 /* ---------- responsive */
 @media (max-width: 1100px) {
@@ -249,7 +248,7 @@ main, .footer, .nav { position: relative; z-index: 1; }
 }
 @media (max-width: 760px) {
   .logo { font-size: 16px; }
-  .logo-mark svg { width: 28px; height: 28px; }
+  .logo-mark { width: 34px; height: 34px; }
   .nav-cta { font-size: 14px; padding: 8px 14px; }
   .hero { grid-template-columns: minmax(0, 1fr); padding-top: 92px; gap: 0; }
   .hero-copy { display: contents; }
