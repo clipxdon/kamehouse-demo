@@ -9,6 +9,8 @@ import Marquee from './components/Marquee'
 import TiltCard from './components/TiltCard'
 import { SHOP, CREDIT, BRANDS, CATEGORIES, SERVICES, REVIEWS, HOURS } from './content'
 import { scene, reducedMotion, isMobile } from './store'
+import logo160 from './assets/logo-160.webp'
+import logo512 from './assets/logo-512.webp'
 
 gsap.registerPlugin(ScrollTrigger)
 const Scene = lazy(() => import('./three/Scene'))
@@ -55,9 +57,7 @@ function Nav() {
   return (
     <header className="nav">
       <a href="#top" onClick={go('top')} className="logo" aria-label="Kamehouse, torna su">
-        <span className="logo-mark" aria-hidden="true">
-          <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" /><path d="M15 37 32 20l17 17v11H15z" /></svg>
-        </span>
+        <img className="logo-mark" src={logo160} alt="" width="40" height="40" />
         Kamehouse
       </a>
       <nav aria-label="Sezioni">
@@ -373,10 +373,16 @@ function Visit() {
 function Footer() {
   return (
     <footer className="footer">
-      <p className="f-big" aria-hidden="true">KAMEHOUSE</p>
+      {/* SVG sized to the word's own metrics: always fits the footer width */}
+      <svg className="f-big" viewBox="10 -777 8400 812" aria-hidden="true" focusable="false">
+        <text x="0" y="0" fontSize="1000" textLength="8419" lengthAdjust="spacingAndGlyphs">KAMEHOUSE</text>
+      </svg>
       <div className="f-row">
-        <p>© {new Date().getFullYear()} {SHOP.legalName} · {SHOP.address}, {SHOP.city} · P.IVA {SHOP.vat} · Tel. {SHOP.phone}</p>
-        <p><a href={SHOP.privacy}>Privacy e cookie</a> · I marchi citati appartengono ai rispettivi proprietari. · Sito realizzato da <a href={CREDIT.url} target="_blank" rel="noopener">{CREDIT.name}</a></p>
+        <img className="f-logo" src={logo512} alt="Logo di Kamehouse Fossano" width="96" height="96" loading="lazy" />
+        <div className="f-text">
+          <p>© {new Date().getFullYear()} {SHOP.legalName} · {SHOP.address}, {SHOP.city} · P.IVA {SHOP.vat} · Tel. {SHOP.phone}</p>
+          <p><a href={SHOP.privacy}>Privacy e cookie</a> · I marchi citati appartengono ai rispettivi proprietari. · Sito realizzato da <a href={CREDIT.url} target="_blank" rel="noopener">{CREDIT.name}</a></p>
+        </div>
       </div>
     </footer>
   )
