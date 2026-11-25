@@ -381,7 +381,7 @@ function Footer() {
         <img className="f-logo" src={logo512} alt="Logo di Kamehouse Fossano" width="96" height="96" loading="lazy" />
         <div className="f-text">
           <p>© {new Date().getFullYear()} {SHOP.legalName} · {SHOP.address}, {SHOP.city} · P.IVA {SHOP.vat} · Tel. {SHOP.phone}</p>
-          <p><a href={SHOP.privacy}>Privacy e cookie</a> · I marchi citati appartengono ai rispettivi proprietari. · Sito realizzato da <a href={CREDIT.url} target="_blank" rel="noopener">{CREDIT.name}</a></p>
+          <p><a href={SHOP.privacy}>Privacy e cookie</a> · I marchi citati appartengono ai rispettivi proprietari. · Sito realizzato da {CREDIT.url ? <a href={CREDIT.url} target="_blank" rel="noopener">{CREDIT.name}</a> : CREDIT.name}</p>
         </div>
       </div>
     </footer>
